@@ -31,7 +31,7 @@ public class LexIntentHandler implements RequestHandler<LexEvent, LexResponse> {
                 LexResponse response = null;
                 switch (intentName) {
                     case "CheckAccountNumberIntent" -> {
-                        //TODO In progress (bin info) 
+                        //TODO In progress (bin info)
                     }
                     case "BankingSupportIntent" -> {
                         //TODO In progress (support number and hours) +
