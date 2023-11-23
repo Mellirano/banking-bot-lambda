@@ -1,0 +1,4 @@
+en:
+  faker:
+    address:
+      cities: [ 'Kyiv', 'Kharkiv, Kvarkiv obl.', 'Odesa, Odessa obl.', 'Dnipro, Dnipropetrovsk obl.', 'Zaporizhzhia, Zaporizhzhia obl.', 'Lviv, Lviv obl.', 'Kryvyi Rih, Dnipropetrovsk obl.', 'Mykolaiv, Mykolaiv obl.', 'Vinnytsia, Vinnytsia obl.', 'Chernihiv, Chernihiv obl.', 'Kherson, Kherson obl.', 'Poltava, Poltava obl.']

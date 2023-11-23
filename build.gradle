@@ -1,0 +1,90 @@
+buildscript {
+    ext {
+        lombokVersion = '1.18.30'
+    }
+}
+
+plugins {
+    id 'java'
+    id 'idea'
+    id 'checkstyle'
+    id 'com.github.spotbugs' version '5.2.3'
+}
+
+group = 'ua.udunt.lex'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+dependencies {
+    implementation(
+            'org.slf4j:slf4j-simple:2.0.9',
+            'com.amazonaws:aws-lambda-java-core:1.2.3',
+            'com.fasterxml.jackson.core:jackson-core:2.15.2',
+            'com.fasterxml.jackson.core:jackson-databind:2.15.2',
+            'net.datafaker:datafaker:2.0.2',
+            'org.yaml:snakeyaml:2.2',
+            'org.json:json:20231013'
+    )
+    compileOnly(
+            "org.projectlombok:lombok:${lombokVersion}"
+    )
+    annotationProcessor(
+            "org.projectlombok:lombok:${lombokVersion}"
+    )
+    testImplementation(
+            'org.junit.vintage:junit-vintage-engine:5.10.1'
+    )
+    testCompileOnly(
+            "org.projectlombok:lombok:${lombokVersion}",
+    )
+    testAnnotationProcessor(
+            "org.projectlombok:lombok:${lombokVersion}"
+    )
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes 'Main-Class': 'ua.udunt.lex.Main'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+checkstyle {
+    toolVersion "10.12.4"
+    configFile = file("${project.rootDir}/checkstyle/checkstyle.xml")
+}
+
+spotbugs {
+    effort = "max"
+    excludeFilter = file("${project.rootDir}/checkstyle/spotfix_exclude_filter.xml")
+}
+
+[spotbugsMain].each { task ->
+    task.configure {
+        reports {
+            html {
+                enabled = true
+            }
+        }
+    }
+}

@@ -1,0 +1,4 @@
+en:
+  faker:
+    female:
+      names: [ 'Anna', 'Tatyana' , 'Maria', 'Agnieszka', 'Oksana', 'Oleksandra', "Vladlena", 'Natalya', 'Roza', 'Kateryna', 'Eugenia', 'Anastasiya', 'Mira', 'Lada', 'Svetlana']

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+    <Match>
+        <Bug code="ST"/>
+    </Match>
+    <Match>
+        <Bug code="EI"/>
+    </Match>
+    <Match>
+        <Bug code="EI2"/>
+    </Match>
+    <Match>
+        <Bug code="Se"/>
+    </Match>
+    <Match>
+        <Bug code="ES"/>
+    </Match>
+    <Match>
+        <Bug code="NP"/>
+    </Match>
+    <Match>
+        <Bug code="DC"/>
+    </Match>
+</FindBugsFilter>

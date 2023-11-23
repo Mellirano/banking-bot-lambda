@@ -1,0 +1,4 @@
+en:
+  faker:
+    name:
+      lastnames: [ 'Belovenko', 'Avramenko', 'Serdiuk', 'Nosenko', 'Myasoed', 'Belous', 'Chornous', 'Postochenko', 'Pipa', 'Kartoplyanko', 'Kovbasa', 'Gnylozub', 'Bezub', 'Belokon', 'Martynenko' ]

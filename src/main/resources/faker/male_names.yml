@@ -1,0 +1,4 @@
+en:
+  faker:
+    male:
+      names: [ 'Oleg', 'Stanislav', 'Bogdan', 'Andriy', 'Dmitriy', 'Oleksandr', 'Maksym', 'Valeriy', 'Vladislav', "Roman", 'Vyacheslav', 'Ivan', 'Boris', 'Miroslav', 'Vladimir']

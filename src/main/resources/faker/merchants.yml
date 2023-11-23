@@ -1,0 +1,4 @@
+en:
+  faker:
+    shopping:
+      merchants: [ 'Rozetka', 'Amazon', 'EVA', 'Fozzy', 'Metro', "Epicenter", 'Nova Poshta', 'Uklon', 'Bolt', 'MasterZOO', 'Silpo', "Roshen", 'Synevo', 'PizzaDay', 'OKVine', 'MacDonalds', 'Varus', 'Jysk', 'ATB', 'Ashan' ]

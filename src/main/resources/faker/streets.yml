@@ -1,0 +1,4 @@
+en:
+  faker:
+    address:
+      streets: [ 'Ammunition lane.', 'Amur Str.', 'Andrew Malyshko str.', 'Andrey Bubnov st.', 'Andrey Golovko str.', 'Bauman Lane.', 'Bauman Street.', 'Baykova street.', 'Bazhov street.', 'Beethoven Street.', 'Cherkasy str.', 'Chernigov lane.', 'Chernigov street.', 'Chernivtsi Street.', 'Chernobyl Str.', 'Chernyakhovsky Str.', 'Frometovskaya street.', 'Frometovsky descent', 'Fruit Street.', 'Polupanova street.', 'Polyakov Alexander Street.', 'Polyanskaya street.', 'Polyansky lane.', 'Polytechnic lane.', 'Tar street.', 'Taras Shevchenko Str.', 'Taras Shevchenkos lane.', 'Tarashchansky lane.', 'Tarashchansky street.' ]

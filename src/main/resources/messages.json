@@ -1,0 +1,60 @@
+{
+  "ProcessCurrentExchangeIntent": {
+    "message": "Exchange rates for $EXCHANGE_TYPE $EXCHANGE_CURRENCY was found - purchase: $PURCHASE UAH, sale: $SALE UAH",
+    "invalidExchangeType": "Invalid exchange type. Support cash and non-cash only. Try again",
+    "invalidExchangeCurrency": "Invalid exchange currency. Support USD and EUR. Try again"
+  },
+  "CheckAccountNumberIntent": {
+    "message": "Processed data about card: $CARD: bank: $BANK, payment system: $PS, country: $COUNTRY",
+    "invalidAccountNumber": "Invalid account number. Please, enter correct card"
+  },
+  "ClientDataIntent": {
+    "message": "So, this is public information found about you:\nFull name: $FULL_NAME\nAddress: $ADDRESS\nDate of birth: $DATE_BIRTH\nSex: $SEX\nPhone: $PHONE\nSocial security number: $SSN\nActive bank user from: $BANK_DATE",
+    "invalidPhone": "Invalid phone number. Please, enter correct phone"
+  },
+  "TransactionHistoryIntent": {
+    "title": "Your transaction history for $TRANSACTION_DATE:",
+    "message": "Merchant: $MERCHANT | Amount: $AMOUNT $CURRENCY",
+    "invalidTransactionDate": "Invalid date. Please, provide correct date"
+  },
+  "CardBalanceIntent": {
+    "message": "Your current card: $ACCOUNT_NUMBER balance: $AMOUNT $CURRENCY",
+    "invalidAccountNumber": "Invalid account number. Please, enter correct card"
+  },
+  "BankingSupportIntent": {
+    "message": "$BANK support hours is started after: $SUPPORT_HOURS and phone: $PHONE",
+    "invalidBankName": "Sorry, cannot obtain information about this bank. Please, provide ukranian bank only",
+    "banks": [
+      {
+        "PrivatBank": "3700"
+      },
+      {
+        "Oschadbank": "0-800-210-800"
+      },
+      {
+        "Ukreximbank": "0-800-50-44-50"
+      },
+      {
+        "Raiffeisen Bank": "0800500500, 0800400504"
+      },
+      {
+        "Ukrgasbank": "0-800-309-000"
+      },
+      {
+        "Sense Bank": "0-800-50-20-50"
+      },
+      {
+        "OTP Bank": "+380444900500"
+      },
+      {
+        "Monobank": "0-800-205-205"
+      },
+      {
+        "A-Bank": "7776"
+      },
+      {
+        "PUMB": "+380442907290"
+      }
+    ]
+  }
+}

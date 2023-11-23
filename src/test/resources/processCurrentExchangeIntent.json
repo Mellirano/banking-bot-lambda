@@ -1,0 +1,101 @@
+{
+  "messageVersion": "1.0",
+  "invocationSource": "FulfillmentCodeHook",
+  "inputMode": "Text",
+  "responseContentType": "text/plain; charset=utf-8",
+  "sessionId": "00303454893278",
+  "inputTranscript": "dollar",
+  "bot": {
+    "id": "QBNKRPPBQV",
+    "name": "BankingSupportBot",
+    "aliasId": "TSTALIASID",
+    "aliasName": "TestBotAlias",
+    "localeId": "en_US",
+    "version": "DRAFT"
+  },
+  "interpretations": [
+    {
+      "intent": {
+        "confirmationState": "None",
+        "name": "ProcessCurrentExchangeIntent",
+        "slots": {
+          "exchangeCurrency": {
+            "shape": "Scalar",
+            "value": {
+              "interpretedValue": "USD",
+              "originalValue": "dollar",
+              "resolvedValues": [
+                "USD"
+              ]
+            }
+          },
+          "exchangeType": {
+            "shape": "Scalar",
+            "value": {
+              "interpretedValue": "Cash",
+              "originalValue": "cash",
+              "resolvedValues": [
+                "Cash",
+                "Non-cash"
+              ]
+            }
+          }
+        },
+        "state": "ReadyForFulfillment"
+      },
+      "nluConfidence": 1
+    }
+  ],
+  "sessionState": {
+    "sessionAttributes": {},
+    "intent": {
+      "confirmationState": "None",
+      "name": "ProcessCurrentExchangeIntent",
+      "slots": {
+        "exchangeCurrency": {
+          "shape": "Scalar",
+          "value": {
+            "interpretedValue": "USD",
+            "originalValue": "dollar",
+            "resolvedValues": [
+              "USD"
+            ]
+          }
+        },
+        "exchangeType": {
+          "shape": "Scalar",
+          "value": {
+            "interpretedValue": "Cash",
+            "originalValue": "cash",
+            "resolvedValues": [
+              "Cash",
+              "Non-cash"
+            ]
+          }
+        }
+      },
+      "state": "ReadyForFulfillment"
+    },
+    "originatingRequestId": "db7cfd7e-0067-4d41-a8ee-a1e9acc3f8c1"
+  },
+  "transcriptions": [
+    {
+      "transcription": "dollar",
+      "transcriptionConfidence": 1,
+      "resolvedContext": {
+        "intent": "ProcessCurrentExchangeIntent"
+      },
+      "resolvedSlots": {
+        "exchangeCurrency": {
+          "shape": "Scalar",
+          "value": {
+            "originalValue": "dollar",
+            "resolvedValues": [
+              "USD"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
