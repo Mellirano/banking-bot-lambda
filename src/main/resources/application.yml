@@ -1,5 +1,5 @@
 services:
   exchange:
     url: https://api.privatbank.ua
-  bininfo:
-    url: https://ecom-bininfo.microaws.com
+  bin:
+    url: https://data.handyapi.com

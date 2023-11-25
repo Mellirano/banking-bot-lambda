@@ -26,6 +26,13 @@ public class PanUtil {
         return (sum % 10 == 0);
     }
 
+    public static String getPanBin(String pan) {
+        if (!LibUtil.isNullOrEmpty(pan) && pan.length() > 6) {
+            return pan.substring(0, 6);
+        }
+        return null;
+    }
+
     public static boolean isValidPan(String pan) {
         return !LibUtil.isNullOrEmptyAll(pan) && PNO.fromPan(pan) != PNO.UNKNOWN && luhnValidate(pan);
     }

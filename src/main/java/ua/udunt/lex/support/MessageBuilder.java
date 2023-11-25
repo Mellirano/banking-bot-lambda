@@ -4,7 +4,9 @@ import net.datafaker.Faker;
 import ua.udunt.lex.config.MessageConfig;
 import ua.udunt.lex.faker.LexFaker;
 import ua.udunt.lex.model.BankingSupportSlot;
+import ua.udunt.lex.model.BinInfo;
 import ua.udunt.lex.model.CardBalanceSlot;
+import ua.udunt.lex.model.CheckAccountNumberSlot;
 import ua.udunt.lex.model.ClientDataSlot;
 import ua.udunt.lex.model.ExchangeInfo;
 import ua.udunt.lex.model.ExchangeSlot;
@@ -15,6 +17,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
+import java.util.Optional;
 import java.util.regex.Pattern;
 
 public class MessageBuilder {
@@ -102,11 +105,20 @@ public class MessageBuilder {
         return null;
     }
 
-    //TODO Finalize
-
-    //    public static String build(CheckAccountNumberSlot slot) {
-//
-//    }
+    public static String build(CheckAccountNumberSlot slot, BinInfo binInfo) {
+        String message = MESSAGE_CONFIG.getMessage("CheckAccountNumberIntent", "message");
+        if (!LibUtil.isNullOrEmpty(message)) {
+            return message
+                    .replaceFirst("\\$CARD", slot.getAccountNumber())
+                    .replaceFirst("\\$BANK", binInfo.getIssuer())
+                    .replaceFirst("\\$PS", binInfo.getScheme())
+                    .replaceFirst("\\$TYPE", binInfo.getType())
+                    .replaceFirst("\\$COUNTRY", Optional.ofNullable(binInfo.getCountry())
+                            .map(BinInfo.Country::getName)
+                            .orElse("Undefined"));
+        }
+        return null;
+    }
 
     public static String build(String intentName, String errorSlot) {
         if (!LibUtil.isNullOrEmptyOneOf(intentName, errorSlot)) {

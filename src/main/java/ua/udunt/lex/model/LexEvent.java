@@ -23,9 +23,9 @@ import java.io.Serializable;
 import java.util.Map;
 
 @Data
-@Builder(setterPrefix = "with")
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder(setterPrefix = "with")
 public class LexEvent implements Serializable {
 
     private String messageVersion;
@@ -42,9 +42,9 @@ public class LexEvent implements Serializable {
     private Transcription[] transcriptions;
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class Bot implements Serializable {
 
         private String id;
@@ -56,9 +56,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class Interpretation implements Serializable {
 
         private Intent intent;
@@ -67,9 +67,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class Intent implements Serializable {
 
         private String confirmationState;
@@ -90,9 +90,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class Slot implements Serializable {
 
         private String shape;
@@ -101,9 +101,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class SlotValue implements Serializable {
 
         private String interpretedValue;
@@ -112,9 +112,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class KendraResponse implements Serializable {
 
         private String queryId;
@@ -124,9 +124,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class KendraResponseResultItem implements Serializable {
 
         private String id;
@@ -142,9 +142,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class KendraResponseDocumentInfo implements Serializable {
 
         private String text;
@@ -152,9 +152,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class KendraResponseDocumentHighlights implements Serializable {
 
         private Integer beginOffset;
@@ -164,9 +164,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class KendraResponseDocumentAttribute implements Serializable {
 
         private String key;
@@ -174,27 +174,27 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class KendraResponseScoreAttributes implements Serializable {
 
         private String scoreConfidence;
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class NluConfidence implements Serializable {
 
         private Double score;
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class SentimentResponse implements Serializable {
 
         private String sentiment;
@@ -202,9 +202,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class SentimentScore implements Serializable {
 
         private Double mixed;
@@ -214,9 +214,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class ProposedNextState implements Serializable {
 
         private DialogAction dialogAction;
@@ -224,9 +224,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class DialogAction implements Serializable {
 
         private String slotToElicit;
@@ -234,9 +234,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class SessionState implements Serializable {
 
         private ActiveContext[] activeContexts;
@@ -248,9 +248,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class ActiveContext implements Serializable {
 
         private String name;
@@ -259,9 +259,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class TimeToLive implements Serializable {
 
         private Integer timeToLiveInSeconds;
@@ -269,36 +269,36 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class RuntimeHints implements Serializable {
 
         private Map<String, Map<String, Hint>> slotHints;
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class Hint implements Serializable {
 
         private RuntimeHintValue[] runtimeHintValues;
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class RuntimeHintValue implements Serializable {
 
         private String phrase;
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class Transcription implements Serializable {
 
         private String transcription;
@@ -318,9 +318,9 @@ public class LexEvent implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class ResolvedContext implements Serializable {
 
         private String intent;

@@ -3,11 +3,14 @@ package ua.udunt;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import ua.udunt.lex.model.BankingSupportSlot;
+import ua.udunt.lex.model.BinInfo;
 import ua.udunt.lex.model.CardBalanceSlot;
+import ua.udunt.lex.model.CheckAccountNumberSlot;
 import ua.udunt.lex.model.ClientDataSlot;
 import ua.udunt.lex.model.ExchangeInfo;
 import ua.udunt.lex.model.ExchangeSlot;
 import ua.udunt.lex.model.TransactionHistorySlot;
+import ua.udunt.lex.service.BinInfoService;
 import ua.udunt.lex.support.MessageBuilder;
 
 @Slf4j
@@ -63,6 +66,18 @@ public class MessageBuilderTest {
                 .supportPhone("3700")
                 .build();
         log.info("Message: {}", MessageBuilder.build(bankingSupportSlot));
+    }
+
+    @Test
+    public void checkAccountNumberSlotMessageTest() {
+        String accountNumber = "5168752021610608";
+        CheckAccountNumberSlot checkAccountNumberSlot = CheckAccountNumberSlot.builder()
+                .accountNumber(accountNumber)
+                .build();
+
+        BinInfoService binInfoService = BinInfoService.getInstance();
+        BinInfo binInfo = binInfoService.getBinInfo(accountNumber);
+        log.info("Message: {}", MessageBuilder.build(checkAccountNumberSlot, binInfo));
     }
 
     @Test

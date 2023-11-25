@@ -5,7 +5,7 @@
     "invalidExchangeCurrency": "Invalid exchange currency. Support USD and EUR. Try again"
   },
   "CheckAccountNumberIntent": {
-    "message": "Processed data about card: $CARD: bank: $BANK, payment system: $PS, country: $COUNTRY",
+    "message": "Processed data about card: $CARD >> bank: $BANK, payment system: $PS, type: $TYPE, country: $COUNTRY",
     "invalidAccountNumber": "Invalid account number. Please, enter correct card"
   },
   "ClientDataIntent": {
@@ -18,7 +18,7 @@
     "invalidTransactionDate": "Invalid date. Please, provide correct date"
   },
   "CardBalanceIntent": {
-    "message": "Your current card: $ACCOUNT_NUMBER balance: $AMOUNT $CURRENCY",
+    "message": "Your current card: $ACCOUNT_NUMBER >> balance: $AMOUNT $CURRENCY",
     "invalidAccountNumber": "Invalid account number. Please, enter correct card"
   },
   "BankingSupportIntent": {

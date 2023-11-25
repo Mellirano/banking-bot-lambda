@@ -1,5 +1,6 @@
 package ua.udunt.lex.support;
 
+import ua.udunt.lex.exception.IllegalSlotException;
 import ua.udunt.lex.model.LexEvent;
 import ua.udunt.lex.model.LexResponse;
 
@@ -31,26 +32,24 @@ public class LexResponseBuilder {
         });
     }
 
+    public static LexResponse elicit(LexEvent event, IllegalSlotException e) {
+        LexEvent.SessionState sessionState = event.getSessionState();
+        LexEvent.Intent intent = sessionState.getIntent();
+        return LexResponse.builder()
+                .withSessionState(LexEvent.SessionState.builder()
+                        .withDialogAction(LexEvent.DialogAction.builder()
+                                .withType("ElicitSlot")
+                                .withSlotToElicit(e.getSlotName())
+                                .build())
+                        .withIntent(LexEvent.Intent.builder()
+                                .withName(intent.getName())
+                                .build())
+                        .build())
+                .build();
+    }
+
     public static LexResponse closeError(LexEvent event) {
         return close(event, "Failed", null);
     }
-
-    //TODO Add reilicit
-    //'sessionState': {
-    //            'activeContexts':[{
-    //                'name': 'intentContext',
-    //                'contextAttributes': active_contexts,
-    //                'timeToLive': {
-    //                    'timeToLiveInSeconds': 600,
-    //                    'turnsToLive': 1
-    //                }
-    //            }],
-    //            'sessionAttributes': session_attributes,
-    //            'dialogAction': {
-    //                'type': 'ElicitSlot',
-    //                'slotToElicit': slot_to_elicit
-    //            },
-    //            'intent': intent,
-    //        }
 
 }

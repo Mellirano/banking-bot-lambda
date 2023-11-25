@@ -22,9 +22,9 @@ import java.io.Serializable;
 import java.util.Map;
 
 @Data
-@Builder(setterPrefix = "with")
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder(setterPrefix = "with")
 public class LexResponse implements Serializable {
 
     private LexEvent.SessionState sessionState;
@@ -32,9 +32,9 @@ public class LexResponse implements Serializable {
     private Map<String, String> requestAttributes;
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class Message implements Serializable {
 
         private String contentType;
@@ -43,9 +43,9 @@ public class LexResponse implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class ImageResponseCard implements Serializable {
 
         private String title;
@@ -55,9 +55,9 @@ public class LexResponse implements Serializable {
     }
 
     @Data
-    @Builder(setterPrefix = "with")
     @NoArgsConstructor
     @AllArgsConstructor
+    @Builder(setterPrefix = "with")
     public static class Button implements Serializable {
 
         private String text;
