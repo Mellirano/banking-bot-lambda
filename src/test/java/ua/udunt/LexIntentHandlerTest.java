@@ -28,4 +28,11 @@ public class LexIntentHandlerTest {
         handler.handleRequest(event, null);
     }
 
+    @Test
+    public void processCheckAccountNumberIntentTest() throws IOException {
+        LexEvent event = initializeEvent("processCheckAccountNumberIntent");
+        LexIntentHandler handler = new LexIntentHandler();
+        handler.handleRequest(event, null);
+    }
+
 }

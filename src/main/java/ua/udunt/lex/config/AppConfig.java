@@ -40,11 +40,12 @@ public final class AppConfig {
         String[] sub = path.split("\\.");
         String param = null;
         int i = 0;
+        Map<String, Object> copiedConfig = config;
         for (String s : sub) {
             i++;
-            Object o = config.get(s);
+            Object o = copiedConfig.get(s);
             if (o instanceof Map) {
-                config = (Map<String, Object>) o;
+                copiedConfig = (Map<String, Object>) o;
             } else {
                 if (i == sub.length && o != null) {
                     param = o.toString();

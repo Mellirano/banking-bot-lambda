@@ -1,0 +1,137 @@
+{
+    "messageVersion": "1.0",
+    "invocationSource": "DialogCodeHook",
+    "inputMode": "Text",
+    "responseContentType": "text/plain; charset=utf-8",
+    "sessionId": "003034548932643",
+    "inputTranscript": "5168752083085210",
+    "bot": {
+        "id": "QBNKRPPBQV",
+        "name": "BankingSupportBot",
+        "aliasId": "TSTALIASID",
+        "aliasName": "TestBotAlias",
+        "localeId": "en_US",
+        "version": "DRAFT"
+    },
+    "interpretations": [
+        {
+            "intent": {
+                "confirmationState": "None",
+                "name": "CheckAccountNumberIntent",
+                "slots": {
+                    "accountNumber": {
+                        "shape": "Scalar",
+                        "value": {
+                            "interpretedValue": "5168752083085210",
+                            "originalValue": "5168752083085210",
+                            "resolvedValues": [
+                                "5168752083085210"
+                            ]
+                        }
+                    }
+                },
+                "state": "InProgress"
+            },
+            "nluConfidence": 1
+        },
+        {
+            "intent": {
+                "confirmationState": "None",
+                "name": "ClientDataIntent",
+                "slots": {
+                    "phone": {
+                        "shape": "Scalar",
+                        "value": {
+                            "interpretedValue": "5168752083085210",
+                            "originalValue": "5168752083085210",
+                            "resolvedValues": [
+                                "5168752083085210"
+                            ]
+                        }
+                    }
+                },
+                "state": "InProgress"
+            },
+            "nluConfidence": 0.8
+        },
+        {
+            "intent": {
+                "confirmationState": "None",
+                "name": "CancelIntent",
+                "slots": {},
+                "state": "InProgress"
+            },
+            "nluConfidence": 0.59
+        },
+        {
+            "intent": {
+                "confirmationState": "None",
+                "name": "FallbackIntent",
+                "slots": {},
+                "state": "InProgress"
+            }
+        },
+        {
+            "intent": {
+                "confirmationState": "None",
+                "name": "TransactionHistoryIntent",
+                "slots": {
+                    "transactionDate": null,
+                    "accountNumber": {
+                        "shape": "Scalar",
+                        "value": {
+                            "interpretedValue": "5168752083085210",
+                            "originalValue": "5168752083085210",
+                            "resolvedValues": [
+                                "5168752083085210"
+                            ]
+                        }
+                    }
+                },
+                "state": "InProgress"
+            },
+            "nluConfidence": 0.51
+        }
+    ],
+    "sessionState": {
+        "sessionAttributes": {},
+        "intent": {
+            "confirmationState": "None",
+            "name": "CheckAccountNumberIntent",
+            "slots": {
+                "accountNumber": {
+                    "shape": "Scalar",
+                    "value": {
+                        "interpretedValue": "5168752083085210",
+                        "originalValue": "5168752083085210",
+                        "resolvedValues": [
+                            "5168752083085210"
+                        ]
+                    }
+                }
+            },
+            "state": "InProgress"
+        },
+        "originatingRequestId": "a1900352-e9c2-414c-90c1-3b9cc3f21791"
+    },
+    "transcriptions": [
+        {
+            "transcription": "5168752083085210",
+            "transcriptionConfidence": 1,
+            "resolvedContext": {
+                "intent": "CheckAccountNumberIntent"
+            },
+            "resolvedSlots": {
+                "accountNumber": {
+                    "shape": "Scalar",
+                    "value": {
+                        "originalValue": "5168752083085210",
+                        "resolvedValues": [
+                            "5168752083085210"
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}
