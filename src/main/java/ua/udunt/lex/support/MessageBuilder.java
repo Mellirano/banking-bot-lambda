@@ -66,7 +66,9 @@ public class MessageBuilder {
         String message = MESSAGE_CONFIG.getMessage("TransactionHistoryIntent", "message");
         if (!LibUtil.isNullOrEmptyOneOf(title, message)) {
             LexFaker faker = new LexFaker();
-            title = title.replaceFirst("\\$TRANSACTION_DATE", slot.getTransactionDate());
+            title = title
+                    .replaceFirst("\\$ACCOUNT_NUMBER", slot.getAccountNumber())
+                    .replaceFirst("\\$TRANSACTION_DATE", slot.getTransactionDate());
             StringBuilder finalMessage = new StringBuilder(title);
             int transactionCount = faker.number().numberBetween(1, 15);
             for (int i = 0; i < transactionCount; i++) {
@@ -74,7 +76,8 @@ public class MessageBuilder {
                         .append(message
                                 .replaceFirst("\\$MERCHANT", faker.ukranian().merchant())
                                 .replaceFirst("\\$AMOUNT", faker.commerce().price())
-                                .replaceFirst("\\$CURRENCY", faker.expression("#{regexify '(UAH|USD|EUR)'}")));
+                                .replaceFirst("\\$CURRENCY", faker.expression("#{regexify '(UAH|USD|EUR)'}")))
+                        .append(";");
             }
             return finalMessage.toString();
         }
@@ -99,7 +102,7 @@ public class MessageBuilder {
             Faker faker = new Faker();
             return message
                     .replaceFirst("\\$BANK", slot.getBankName())
-                    .replaceFirst("\\$SUPPORT_HOURS", faker.expression("#{regexify '(8/00|9/00|10/00)'}"))
+                    .replaceFirst("\\$SUPPORT_HOURS", faker.expression("#{regexify '(8:00 AM|9:00 AM|10:00 AM)'}"))
                     .replaceFirst("\\$PHONE", slot.getSupportPhone());
         }
         return null;

@@ -44,6 +44,7 @@ public class MessageBuilderTest {
     @Test
     public void transactionHistorySlotMessageTest() {
         TransactionHistorySlot transactionHistorySlot = TransactionHistorySlot.builder()
+                .accountNumber("4111111111111111")
                 .transactionDate("21.12.2023")
                 .build();
 

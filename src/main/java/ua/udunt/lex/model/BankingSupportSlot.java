@@ -24,7 +24,7 @@ public class BankingSupportSlot extends AbstractSlot {
 
     public BankingSupportSlot(Map<String, LexEvent.Slot> slots) {
         this.bankName = Optional.ofNullable(slots.get("bankName"))
-                .map(s -> s.getValue().getOriginalValue())
+                .map(s -> s.getValue().getInterpretedValue())
                 .orElse(null);
         this.supportPhone = MessageConfig.getInstance()
                 .getMessage("BankingSupportIntent", "banks", bankName);

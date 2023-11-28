@@ -9,11 +9,11 @@
     "invalidAccountNumber": "Invalid account number. Please, enter correct card"
   },
   "ClientDataIntent": {
-    "message": "So, this is public information found about you:\nFull name: $FULL_NAME\nAddress: $ADDRESS\nDate of birth: $DATE_BIRTH\nSex: $SEX\nPhone: $PHONE\nSocial security number: $SSN\nActive bank user from: $BANK_DATE",
+    "message": "So, this is public information found about you: Full name: $FULL_NAME; Address: $ADDRESS; Date of birth: $DATE_BIRTH; Sex: $SEX; Phone: $PHONE; Social security number: $SSN; Active bank user from: $BANK_DATE",
     "invalidPhone": "Invalid phone number. Please, enter correct phone"
   },
   "TransactionHistoryIntent": {
-    "title": "Your transaction history for $TRANSACTION_DATE:",
+    "title": "Your transaction history for card: $ACCOUNT_NUMBER at $TRANSACTION_DATE:",
     "message": "Merchant: $MERCHANT | Amount: $AMOUNT $CURRENCY",
     "invalidTransactionDate": "Invalid date. Please, provide correct date"
   },

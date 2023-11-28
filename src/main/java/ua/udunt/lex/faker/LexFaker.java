@@ -8,6 +8,7 @@ import ua.udunt.lex.util.LibUtil;
 
 import java.nio.file.Paths;
 import java.util.Locale;
+import java.util.Objects;
 
 @Slf4j
 public class LexFaker extends Faker {
@@ -23,12 +24,22 @@ public class LexFaker extends Faker {
         protected UkranianProvider(BaseProviders faker) {
             super(faker);
             this.faker = faker;
-            faker.addPath(Locale.ENGLISH, Paths.get("src/main/resources/faker/merchants.yml"));
-            faker.addPath(Locale.ENGLISH, Paths.get("src/main/resources/faker/streets.yml"));
-            faker.addPath(Locale.ENGLISH, Paths.get("src/main/resources/faker/cities.yml"));
-            faker.addPath(Locale.ENGLISH, Paths.get("src/main/resources/faker/male_names.yml"));
-            faker.addPath(Locale.ENGLISH, Paths.get("src/main/resources/faker/female_names.yml"));
-            faker.addPath(Locale.ENGLISH, Paths.get("src/main/resources/faker/lastnames.yml"));
+            try {
+                faker.addPath(Locale.ENGLISH, Paths.get(Objects.requireNonNull(getClass()
+                        .getClassLoader().getResource("faker/merchants.yml")).toURI()));
+                faker.addPath(Locale.ENGLISH, Paths.get(Objects.requireNonNull(getClass()
+                        .getClassLoader().getResource("faker/streets.yml")).toURI()));
+                faker.addPath(Locale.ENGLISH, Paths.get(Objects.requireNonNull(getClass()
+                        .getClassLoader().getResource("faker/cities.yml")).toURI()));
+                faker.addPath(Locale.ENGLISH, Paths.get(Objects.requireNonNull(getClass()
+                        .getClassLoader().getResource("faker/male_names.yml")).toURI()));
+                faker.addPath(Locale.ENGLISH, Paths.get(Objects.requireNonNull(getClass()
+                        .getClassLoader().getResource("faker/female_names.yml")).toURI()));
+                faker.addPath(Locale.ENGLISH, Paths.get(Objects.requireNonNull(getClass()
+                        .getClassLoader().getResource("faker/lastnames.yml")).toURI()));
+            } catch (Exception e) {
+                log.error("", e);
+            }
         }
 
         public String merchant() {
